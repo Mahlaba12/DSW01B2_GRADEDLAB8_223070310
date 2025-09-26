@@ -12,7 +12,6 @@ export default function App() {
   const [tasks, setTasks] = useState([]);
   const [taskText, setTaskText] = useState("");
 
-  // Add new task
   const addTask = () => {
     if (taskText.trim() === "") return;
     const newTask = {
@@ -24,7 +23,6 @@ export default function App() {
     setTaskText("");
   };
 
-  // Toggle task done
   const toggleTask = (id) => {
     setTasks(
       tasks.map((task) =>
@@ -33,7 +31,6 @@ export default function App() {
     );
   };
 
-  // Delete task
   const deleteTask = (id) => {
     setTasks(tasks.filter((task) => task.id !== id));
   };
